@@ -13,5 +13,17 @@ namespace Homework_2
         {
             InitializeComponent();
         }
+
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            var buttonText = (sender as Button).Text;
+            if (buttonText != "C") {
+                labelResult.Text = labelResult.Text + buttonText;
+            }
+            else
+            {
+                labelResult.Text = "";
+            }
+        }
     }
 }
